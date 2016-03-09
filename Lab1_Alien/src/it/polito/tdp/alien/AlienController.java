@@ -60,15 +60,12 @@ public class AlienController {
 		}
 		if(traduzione==null){
 			a.translateWord(parolaAliena);
-			txtResult.setText(a.translateWord(parolaAliena));
+			txtResult.setText("Traduzioni\n"+a.translateWord(parolaAliena));
 		} else{
 			a.addWord(parolaAliena, traduzione);
 			txtResult.setText("parola aggiunta" +a.getDizionario());
 		}
-
 	}
-
-
 	@FXML
 	void doReset(ActionEvent event) {
 		txtWord.clear();
